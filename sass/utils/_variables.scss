@@ -1,0 +1,15 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-text-color);
+    background-color: var(--first-white);
+}
+
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196F3;
+    --first-white: #FFFFFF;
+    --first-black: #000000;
+    --background-color-one: #F5F4FA;
+    --background-color-two: #2F303A;
+}
