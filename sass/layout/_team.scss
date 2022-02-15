@@ -12,7 +12,10 @@
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
-        // margin-left: -30px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: -30px;
+        margin-bottom: -30px;
     }
     &__card {
         padding-bottom: 30px;
@@ -60,7 +63,9 @@
 }
 
 // .team .team__item+.team__item {
-//     // margin-left: 30px;
+//     @media screen and (min-width: 1200px) {
+//         margin-left: 30px;
+//     }
 // }
 .team__item {
     &:not(:last-child) {

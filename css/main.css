@@ -91,9 +91,9 @@ a {
 .modal {
   width: 90vw;
   position: absolute;
-  top: 10px;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   min-height: 581px;
   background-color: var(--first-white);
   border-radius: 4px;
@@ -191,9 +191,8 @@ a {
 .check-text {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  font-size: 12px;
+  line-height: calc(14 /12);
   color: var(--primary-text-color);
   margin-bottom: 30px;
 }
@@ -207,6 +206,14 @@ a {
   margin-right: 8px;
 }
 
+@media screen and (min-width: 1200px) {
+  .check-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
+
 .policy-check:checked + .check-text::before {
   border: none;
   background-image: url(../images/icon-check.svg);
@@ -217,7 +224,7 @@ a {
 
 .checkbox-link {
   color: var(--accent-color);
-  margin-right: 4px;
+  text-decoration: underline;
 }
 
 .submit-wrap {
@@ -663,6 +670,12 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .features {
+    margin-bottom: -30px;
+  }
+}
+
 .features__section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -850,6 +863,13 @@ header {
   .team {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    margin-left: -30px;
+    margin-bottom: -30px;
   }
 }
 
@@ -1350,9 +1370,6 @@ header {
     margin-right: 30px;
     margin-bottom: 30px;
   }
-  .portfolio-cards .item.item:nth-last-child(-n+3) {
-    margin-bottom: 0;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1375,7 +1392,12 @@ header {
     display: flex;
     flex-wrap: wrap;
     margin-right: -30px;
+    margin-bottom: -30px;
   }
+}
+
+.cards .item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .description {
